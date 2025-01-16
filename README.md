@@ -1,77 +1,58 @@
-# Django Chat Application
+Django Chat Application
 
-A real-time chat application built with Django and WebSocket. This application allows users to sign up, log in, and chat with other registered users in real-time.
+A real-time chat application built with Django.
 
-## Features
+Setup and Installation
 
-- User Sign-up and Login functionality
-- Collapsible left menu displaying all registered users
-- Real-time messaging using WebSocket
-- Stores user data and chat messages in the database
-- Retrieve and display old messages in the chat interface
-- User-friendly and functional chat interface
+Follow the steps below to set up and run the application locally.
 
----
+Clone the Repository git clone
+https://github.com/your-repo/django-chat-app.git cd django-chat-app
 
-## Prerequisites
+Create a Virtual Environment python -m venv env source env/bin/activate
+\# On Windows: env\\Scripts\\activate
 
-Before running the project, ensure you have the following installed:
+Install Dependencies pip install -r requirements.txt
 
-1. **Python 3.8+**: [Download Python](https://www.python.org/downloads/)
-2. **Django Framework**: Installed using `pip`
-3. **Channels for WebSocket**: Installed using `pip`
-4. **Visual Studio Code (VS Code)**: [Download VS Code](https://code.visualstudio.com/)
+Setup the Database Apply migrations to set up the database schema:
 
----
+python manage.py makemigrations python manage.py migrate
 
-## Getting Started
+Create a Superuser Create an admin account for managing users and
+messages:
 
-### Clone the Repository
-
-```bash
-git clone https://github.com/<your-username>/django-chat-app.git
-cd django-chat-app
-Set Up Virtual Environment
-Create a virtual environment:
-bash
-Copy
-Edit
-python -m venv venv
-Activate the virtual environment:
-
-On Windows:
-bash
-Copy
-Edit
-venv\Scripts\activate
-On macOS/Linux:
-bash
-Copy
-Edit
-source venv/bin/activate
-Install Dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Apply Database Migrations
-bash
-Copy
-Edit
-python manage.py migrate
-Create a Superuser
-Create a superuser account to access the Django admin panel:
-
-bash
-Copy
-Edit
 python manage.py createsuperuser
-Follow the prompts to set up a username, email, and password.
 
-Run the Development Server
-bash
-Copy
-Edit
+Start the Development Server Run the application locally:
+
 python manage.py runserver
-Access the application in your browser at:
-http://127.0.0.1:8000
+
+Access the app at: http://127.0.0.1:8000
+
+Features
+
+Real-time messaging
+
+User authentication
+
+Admin interface for managing users and messages
+
+Contributing
+
+Contributions are welcome! Please follow these steps:
+
+Fork the repository.
+
+Create a new branch for your feature or bug fix:
+
+git checkout -b feature-name
+
+Commit your changes:
+
+git commit -m \"Add your message here\"
+
+Push to your fork:
+
+git push origin feature-name
+
+Create a pull request.
